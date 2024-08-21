@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BE_AgentGuard.Data;
 using BE_AgentGuard.Models;
+using System.Drawing;
+using BE_AgentGuard.RouteModel;
+using BE_AgentGuard.FuncMove;
 
 namespace BE_AgentGuard.Controllers
 {
@@ -15,20 +18,20 @@ namespace BE_AgentGuard.Controllers
     public class AgentsController : ControllerBase
     {
         private readonly BE_AgentGuardContext _context;
+        public Move move;
 
         public AgentsController(BE_AgentGuardContext context)
         {
             _context = context;
         }
 
-        // GET: api/Agents1
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Agent>>> GetAgent()
+        public async Task<ActionResult<IEnumerable<Agent>>> GetAgents()
         {
             return await _context.Agent.ToListAsync();
         }
 
-        // GET: api/Agents1/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Agent>> GetAgent(int id)
         {
@@ -42,18 +45,11 @@ namespace BE_AgentGuard.Controllers
             return agent;
         }
 
-        // PUT: api/Agents1/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAgent(int id, Agent agent)
-        {
-            if (id != agent.id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(agent).State = EntityState.Modified;
-
+        [HttpPut("{id}/pin")]
+        public async Task<IActionResult> PinAgent(int id, RouteModel.Point point)
+        {            
+            Agent agent = await _context.Agent.FirstAsync(user => user.id == id);
+            agent.Point = point;
             try
             {
                 await _context.SaveChangesAsync();
@@ -72,9 +68,17 @@ namespace BE_AgentGuard.Controllers
 
             return NoContent();
         }
+        [HttpPut("{id}/move")]
+        public async Task<IActionResult> MoveAgent(int id,Directions directions)
+        {
+            Agent agent = _context.Agent.Find(id);
+            move = new Move(agent.Point);
+            agent.Point = move.Change(directions);
+            return NoContent();
+        }
+       
 
-        // POST: api/Agents1
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPost]
         public async Task<ActionResult<Agent>> PostAgent(Agent agent)
         {
@@ -84,7 +88,7 @@ namespace BE_AgentGuard.Controllers
             return CreatedAtAction("GetAgent", new { id = agent.id }, agent);
         }
 
-        // DELETE: api/Agents1/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAgent(int id)
         {
