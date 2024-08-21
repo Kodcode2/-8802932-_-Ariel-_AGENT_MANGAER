@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yLE1/8uvJJMQA6Fo1eB81yEFgNFaObvxegehZTCmVz4=",
+  "Source": "BE-AgentGuard",
+  "BasePath": "_content/BE-AgentGuard",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
