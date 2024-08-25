@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BE_AgentGuard.Models.Agent, BE-AgentGuard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[BE_AgentGuard.Models.Agent, BE-AgentGuard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -114,9 +114,126 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BE_AgentGuard.Controllers.PersonController",
+    "Method": "Get",
+    "RelativePath": "api/Person",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BE_AgentGuard.Controllers.PersonController",
+    "Method": "Post",
+    "RelativePath": "api/Person",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BE_AgentGuard.Controllers.PersonController",
+    "Method": "Get",
+    "RelativePath": "api/Person/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BE_AgentGuard.Controllers.PersonController",
+    "Method": "Put",
+    "RelativePath": "api/Person/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BE_AgentGuard.Controllers.PersonController",
+    "Method": "Delete",
+    "RelativePath": "api/Person/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
-    "Method": "GetMission",
-    "RelativePath": "api/Missions",
+    "Method": "GetMissions",
+    "RelativePath": "Missions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -136,7 +253,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "PostMission",
-    "RelativePath": "api/Missions",
+    "RelativePath": "Missions",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -149,7 +266,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BE_AgentGuard.Models.Mission",
+        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -162,7 +279,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "GetMission",
-    "RelativePath": "api/Missions/{id}",
+    "RelativePath": "Missions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -188,7 +305,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "PutMission",
-    "RelativePath": "api/Missions/{id}",
+    "RelativePath": "Missions/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -199,8 +316,8 @@
         "IsRequired": true
       },
       {
-        "Name": "mission",
-        "Type": "BE_AgentGuard.Models.Mission",
+        "Name": "missionAssigned",
+        "Type": "BE_AgentGuard.RouteModel.MissionAssigned",
         "IsRequired": true
       }
     ],
@@ -209,7 +326,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "DeleteMission",
-    "RelativePath": "api/Missions/{id}",
+    "RelativePath": "Missions/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -223,9 +340,19 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
+    "Method": "Update",
+    "RelativePath": "Missions/mission/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BE_AgentGuard.Controllers.TargetsController",
     "Method": "GetTarget",
-    "RelativePath": "api/Targets",
+    "RelativePath": "Targets",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -245,7 +372,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.TargetsController",
     "Method": "PostTarget",
-    "RelativePath": "api/Targets",
+    "RelativePath": "Targets",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -271,7 +398,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.TargetsController",
     "Method": "GetTarget",
-    "RelativePath": "api/Targets/{id}",
+    "RelativePath": "Targets/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -297,7 +424,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.TargetsController",
     "Method": "MoveTarget",
-    "RelativePath": "api/Targets/{id}/move",
+    "RelativePath": "Targets/{id}/move",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -318,7 +445,7 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.TargetsController",
     "Method": "PinTarget",
-    "RelativePath": "api/Targets/{id}/pin",
+    "RelativePath": "Targets/{id}/pin",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

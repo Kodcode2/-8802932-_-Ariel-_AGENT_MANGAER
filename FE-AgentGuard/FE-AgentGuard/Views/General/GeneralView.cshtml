@@ -1,0 +1,176 @@
+﻿@using FE_AgentGuard.InterFaces
+@using FE_AgentGuard.Models.ServerModel
+@model FE_AgentGuard.Models.ViewModel.General
+
+@{
+    ViewData["Title"] = "GeneralView";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent Guard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .agent-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .agent-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .agent-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .agent-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .agent-nickname {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .agent-status {
+            color: #555;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .column {
+            width: 45%; /* Adjust width as needed */
+        }
+
+        .column h2 {
+            margin-top: 0;
+        }
+
+        .column ul {
+            padding: 0;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>תצוגה כללית</h1>
+
+    <table>
+        @for (int i = 0; i < 100; i++)
+        {
+                    <tr>
+                @for (int j = 0; j < 100; j++)
+                {
+                                    <td class="@ChangeColor(j, i)">
+                        @{
+                            if (Model.persons.TryGetValue(new Point(j, i), out Person a))
+                            {
+                                   <a href="@Url.Action("Details", "Targets", new { id = a.Id })" style="display: block; width: 100%; height: 100%;"></a>
+                            }
+                        }
+                                    </td>
+                }
+                    </tr>
+        }
+    </table>
+
+    <h4>מקרא</h4>
+    <p>אדום = אויב לא מצוות למשימה</p>
+    <p>כחול = סוכן לא מצוות למשימה</p>
+    <p>ירוק = אויב מצוות למשימה</p>
+    <p>צהוב = סוכן מצוות למשימה</p>
+
+    <div class="container">
+        <div class="column">
+            <h2>סוכנים</h2>
+            <ul class="agent-list">
+                @foreach (var agent in Model.agents)
+                {
+                            <li class="agent-item">
+                                <img src="@agent.photoUrl" alt="Photo of @agent.nickname" class="agent-photo" />
+                                <div class="agent-info">
+                                        <a href="@Url.Action("Details", "Targets", new { id = agent.Id })" class="agent-nickname">
+                                @agent.nickname
+                                    </a>
+                                    <span class="agent-status">
+                                @(agent.is_active ? "בפעולה" : "רדום")
+                                    </span>
+                                </div>
+                            </li>
+                }
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2>מטרות</h2>
+            <ul class="agent-list">
+                @foreach (var target in Model.targets)
+                {
+                            <li class="agent-item">
+                                <img src="@target.photoUrl" alt="Photo of @target.name" class="agent-photo" />
+                                <div class="agent-info">
+                                    <a href="@Url.Action( "Details","Agents", new { id = target.Id })" class="agent-nickname">
+                                @target.name
+                                    </a>
+                                    <span class="agent-status">
+                                @(target.is_active ? "חי" : "חוסל")
+                                    </span>
+                                </div>
+                            </li>
+                }
+            </ul>
+        </div>
+    </div>
+</body>
+
+@functions {
+    private string ChangeColor(int x, int y)
+    {
+        Point point = new(x, y);
+        if (Model.persons.TryGetValue(point, out Person person))
+        {
+            return person.color;
+        }
+        return "white"; // צבע ברירת מחדל
+    }
+}

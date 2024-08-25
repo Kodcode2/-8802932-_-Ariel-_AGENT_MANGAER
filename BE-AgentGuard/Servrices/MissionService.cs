@@ -1,6 +1,10 @@
-﻿using BE_AgentGuard.Interface;
+﻿using BE_AgentGuard.Controllers;
+using BE_AgentGuard.Data;
+using BE_AgentGuard.FuncMove;
+using BE_AgentGuard.Interface;
 using BE_AgentGuard.Models;
 using BE_AgentGuard.RouteModel;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 
@@ -11,7 +15,7 @@ namespace BE_AgentGuard.Servrices
         public IPerson person;
         public List<IPerson> persons;
         // dict for person and to now which func I need to choice 
-        private Dictionary<Type, Func< int, Mission>> HowPersonIt = new();
+        private Dictionary<Type, Func<int, Mission>> HowPersonIt = new();
         public double distance;
         public MissionService(IPerson person, List<IPerson> persons)
         {
@@ -20,7 +24,10 @@ namespace BE_AgentGuard.Servrices
             HowPersonIt.Add(typeof(Target), IdTargetToMission);
             HowPersonIt.Add(typeof(Agent), IdAgentToMission);
         }
-
+        public MissionService( List<IPerson> persons)
+        {
+            this.persons = persons;
+        }
         public List<Mission> CheckMission()
         {
             List<IPerson> personsInRange = CheckPersonsInRange();
@@ -29,21 +36,19 @@ namespace BE_AgentGuard.Servrices
             foreach (var personInRange in personsInRange)
             {
                 // to now how person is Target or Agent
-                missions.Add(HowPersonIt[type](person.Id));
+                missions.Add(HowPersonIt[type](personInRange.Id));
             }
             return missions;
         }
-
         public Mission IdTargetToMission(int id)
         {
-                Mission mission = new Mission();
-                mission.agentID = person.Id;
-                mission.targetID = id;
+            Mission mission = new Mission();
+            mission.agentID = person.Id;
+            mission.targetID = id;
             mission.status = Enums.StatusMission.PENDING;
 
             return mission;
         }
-
         public Mission IdAgentToMission(int id)
         {
             Mission mission = new Mission();
@@ -54,7 +59,6 @@ namespace BE_AgentGuard.Servrices
 
             return mission;
         }
-
         public List<IPerson> CheckPersonsInRange()
         {
             Point point1 = person.point;
@@ -62,14 +66,34 @@ namespace BE_AgentGuard.Servrices
             foreach (var person1 in persons)
             {
                 Point point2 = person1.point;
-                Pointcalculations server = new(point1, point2);
+                PointCalculations server = new(point1, point2);
                 distance = server.difference();
-                if (distance > 200)
+                if (distance < 200 && person1.point.OnTheMap)
                 {
                     list.Add(person1);
                 }
             }
             return list;
+        }
+        public static List<Agent> MoveAgentAssigned(List<Agent> agents)
+        {
+            foreach (Agent agent in agents)
+            {
+                if (agent.is_active)
+                {
+                    PointCalculations a = new(agent.point);
+                    Move b = new(agent.point, agent);
+                    b.ChangeFree(a.Steps());
+                }
+            }                
+            return agents;
+        }
+        public void Kill(List<Agent> agents) 
+        {
+            foreach (var agent in agents)
+            {
+                
+            }
         }
     }
 }

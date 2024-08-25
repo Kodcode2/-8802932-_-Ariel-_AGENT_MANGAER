@@ -9,10 +9,12 @@ using BE_AgentGuard.Data;
 using BE_AgentGuard.Models;
 using BE_AgentGuard.RouteModel;
 using BE_AgentGuard.FuncMove;
+using BE_AgentGuard.Interface;
+using BE_AgentGuard.Servrices;
 
 namespace BE_AgentGuard.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TargetsController : ControllerBase
     {
@@ -45,37 +47,39 @@ namespace BE_AgentGuard.Controllers
         public async Task<IActionResult> PinTarget([FromRoute] int id, [FromBody] Point point)
         {
             Target target = await _context.Target.FindAsync(id);
-            Move move = new(point,target);
+            Move move = new(point, target);
             bool start = move.Start();
             if (!start) { return BadRequest("the target is already pined"); }
-            try
+            _context.SaveChanges();
+            List<Agent> agents = await _context.Agent.Where(t => t.is_active).ToListAsync();
+            MissionService missionService = new(target, agents.Cast<IPerson>().ToList());
+            List<Mission> missions = missionService.CheckMission();
+            foreach (var item in missions)
             {
-                await _context.SaveChangesAsync();
+                _context.Add(item);
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TargetExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
             return Ok("the agent is pined successfully");
         }
         [HttpPut("{id}/move")]
-        public async Task<IActionResult> MoveTarget([FromRoute]int id,[FromBody]Directions direction)
+        public async Task<IActionResult> MoveTarget([FromRoute] int id, [FromBody] Directions direction)
         {
-            
+
             Target target = _context.Target.Find(id);
             if (!target.is_active)
             {
                 BadRequest("Sorry, but the target has been eliminated");
-            }            
-            Move move = new Move(target.point,target);
+            }
+            Move move = new Move(target.point, target);
             move.ChangeFree(direction);
+            await _context.SaveChangesAsync();
+            List<Agent> agents = await _context.Agent.Where(t => t.is_active).ToListAsync();
+            MissionService missionService = new(target, agents.Cast<IPerson>().ToList());
+            List<Mission> missions = missionService.CheckMission();
+            foreach (var item in missions)
+            {
+                _context.Add(item);
+            }
             await _context.SaveChangesAsync();
             return Ok("the agent is moved successfully");
         }

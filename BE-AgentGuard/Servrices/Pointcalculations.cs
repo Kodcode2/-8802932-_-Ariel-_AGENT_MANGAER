@@ -5,17 +5,17 @@ using BE_AgentGuard.RouteModel;
 
 namespace BE_AgentGuard.Servrices
 {
-    public class Pointcalculations
+    public class PointCalculations
     {
         private Point point1;
         private Point point2;
 
-        public Pointcalculations(Point point1, Point point2)
+        public PointCalculations(Point point1, Point point2)
         {
             this.point1 = point1;
             this.point2 = point2;
         }
-        public Pointcalculations(Point point1)
+        public PointCalculations(Point point1)
         {
             this.point1 = point1;
         }

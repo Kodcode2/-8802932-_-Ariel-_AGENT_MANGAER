@@ -7,10 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BE_AgentGuard.Data;
 using BE_AgentGuard.Models;
+using BE_AgentGuard.RouteModel;
+using BE_AgentGuard.Servrices;
+using Microsoft.Ajax.Utilities;
+using BE_AgentGuard.Interface;
 
 namespace BE_AgentGuard.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class MissionsController : ControllerBase
     {
@@ -20,10 +24,14 @@ namespace BE_AgentGuard.Controllers
             _context = context;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Mission>>> GetMission()
+        public async Task<ActionResult<IEnumerable<Mission>>> GetMissions()
         {
             return await _context.Mission.ToListAsync();
         }
+        //public List<Mission> GetMissionsAssigned()
+        //{
+        //    return _context.Mission.Where(statusMission => statusMission.status == Enums.StatusMission.ASSIGNED).ToList();
+        //}
         [HttpGet("{id}")]
         public async Task<ActionResult<Mission>> GetMission(int id)
         {
@@ -37,40 +45,35 @@ namespace BE_AgentGuard.Controllers
             return mission;
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMission(int id, Mission mission)
+        public async Task<IActionResult> PutMission(int id, [FromBody] MissionAssigned missionAssigned)
         {
-            if (id != mission.Id)
-            {
-                return BadRequest();
-            }
+            Mission mission = _context.Mission.Find(id);
+            TimeOnly timeNow = TimeOnly.FromDateTime(DateTime.Now);
+            mission.missionStart = timeNow;
+            mission.remainingTime = (int)mission.distance / 5;
+            mission.status = missionAssigned.statusMission;
+            return NoContent();
+        }
+        [HttpPut("mission/update")]
+        public async Task<IActionResult> Update()
+        {
 
-            _context.Entry(mission).State = EntityState.Modified;
-
-            try
+            List<Agent> agents = _context.Agent.Where(status => status.is_active).ToList();
+            List<Agent> Agents = MissionService.MoveAgentAssigned(agents);
+            foreach (var agent in Agents)
             {
-                await _context.SaveChangesAsync();
+                _context.Agent.Update(agent);
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MissionExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            _context.SaveChanges();
             return NoContent();
         }
         [HttpPost]
-        public async Task<ActionResult<Mission>> PostMission(Mission mission)
+        public async Task<int> PostMission(Mission mission)
         {
             _context.Mission.Add(mission);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMission", new { id = mission.Id }, mission);
+            return mission.Id;
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMission(int id)
@@ -84,7 +87,7 @@ namespace BE_AgentGuard.Controllers
             _context.Mission.Remove(mission);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("mission is deleted successfully"); ;
         }
         private bool MissionExists(int id)
         {

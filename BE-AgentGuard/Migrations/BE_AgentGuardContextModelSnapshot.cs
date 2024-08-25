@@ -72,8 +72,8 @@ namespace BE_AgentGuard.Migrations
                     b.Property<TimeOnly>("missionStart")
                         .HasColumnType("time");
 
-                    b.Property<TimeOnly>("remainingTime")
-                        .HasColumnType("time");
+                    b.Property<int>("remainingTime")
+                        .HasColumnType("int");
 
                     b.Property<int>("status")
                         .HasColumnType("int");

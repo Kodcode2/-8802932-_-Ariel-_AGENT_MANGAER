@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FE_AgentGuard.Models.Models.Agent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nickname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.x)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.photoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.color)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.x)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.y)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.photoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.color)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
