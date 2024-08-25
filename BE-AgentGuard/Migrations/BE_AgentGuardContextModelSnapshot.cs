@@ -24,11 +24,11 @@ namespace BE_AgentGuard.Migrations
 
             modelBuilder.Entity("BE_AgentGuard.Models.Agent", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("is_active")
                         .HasColumnType("bit");
@@ -37,7 +37,7 @@ namespace BE_AgentGuard.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("photo_url")
+                    b.Property<string>("photoUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -47,7 +47,7 @@ namespace BE_AgentGuard.Migrations
                     b.Property<int>("y")
                         .HasColumnType("int");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Agent");
                 });
@@ -62,6 +62,9 @@ namespace BE_AgentGuard.Migrations
 
                     b.Property<int>("agentID")
                         .HasColumnType("int");
+
+                    b.Property<double>("distance")
+                        .HasColumnType("float");
 
                     b.Property<TimeOnly>("duration")
                         .HasColumnType("time");
@@ -95,14 +98,14 @@ namespace BE_AgentGuard.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("is_alive")
+                    b.Property<bool>("is_active")
                         .HasColumnType("bit");
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("photo_url")
+                    b.Property<string>("photoUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

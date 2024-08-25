@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BE_AgentGuard.Data;
 using BE_AgentGuard.Models;
+using BE_AgentGuard.RouteModel;
+using BE_AgentGuard.FuncMove;
 
 namespace BE_AgentGuard.Controllers
 {
@@ -20,15 +22,12 @@ namespace BE_AgentGuard.Controllers
         {
             _context = context;
         }
-
-        // GET: api/Targets
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Target>>> GetTarget()
         {
             return await _context.Target.ToListAsync();
         }
 
-        // GET: api/Targets/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Target>> GetTarget(int id)
         {
@@ -42,18 +41,13 @@ namespace BE_AgentGuard.Controllers
             return target;
         }
 
-        // PUT: api/Targets/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTarget(int id, Target target)
+        [HttpPut("{id}/pin")]
+        public async Task<IActionResult> PinTarget([FromRoute] int id, [FromBody] Point point)
         {
-            if (id != target.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(target).State = EntityState.Modified;
-
+            Target target = await _context.Target.FindAsync(id);
+            Move move = new(point,target);
+            bool start = move.Start();
+            if (!start) { return BadRequest("the target is already pined"); }
             try
             {
                 await _context.SaveChangesAsync();
@@ -69,37 +63,29 @@ namespace BE_AgentGuard.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
+            return Ok("the agent is pined successfully");
         }
-
-        // POST: api/Targets
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}/move")]
+        public async Task<IActionResult> MoveTarget([FromRoute]int id,[FromBody]Directions direction)
+        {
+            
+            Target target = _context.Target.Find(id);
+            if (!target.is_active)
+            {
+                BadRequest("Sorry, but the target has been eliminated");
+            }            
+            Move move = new Move(target.point,target);
+            move.ChangeFree(direction);
+            await _context.SaveChangesAsync();
+            return Ok("the agent is moved successfully");
+        }
         [HttpPost]
         public async Task<ActionResult<Target>> PostTarget(Target target)
         {
             _context.Target.Add(target);
             await _context.SaveChangesAsync();
-
             return CreatedAtAction("GetTarget", new { id = target.Id }, target);
         }
-
-        // DELETE: api/Targets/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTarget(int id)
-        {
-            var target = await _context.Target.FindAsync(id);
-            if (target == null)
-            {
-                return NotFound();
-            }
-
-            _context.Target.Remove(target);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
         private bool TargetExists(int id)
         {
             return _context.Target.Any(e => e.Id == id);

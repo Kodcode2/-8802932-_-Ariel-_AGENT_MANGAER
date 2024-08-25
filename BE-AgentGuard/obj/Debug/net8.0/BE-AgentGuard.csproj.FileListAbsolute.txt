@@ -250,3 +250,17 @@ C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\obj\Debug\net8.0\refint\
 C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\obj\Debug\net8.0\BE-AgentGuard.pdb
 C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\obj\Debug\net8.0\BE-AgentGuard.genruntimeconfig.cache
 C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\obj\Debug\net8.0\ref\BE-AgentGuard.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\obj\Debug\net8.0\BE-AgentGuard.sourcelink.json
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Razor.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Optimization.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Http.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Http.WebHost.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\System.Web.WebPages.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\Antlr3.Runtime.dll
+C:\Users\yair1\source\repos\BE-AgentGuard\BE-AgentGuard\bin\Debug\net8.0\WebGrease.dll

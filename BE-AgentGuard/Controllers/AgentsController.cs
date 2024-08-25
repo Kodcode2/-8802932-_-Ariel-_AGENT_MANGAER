@@ -10,16 +10,16 @@ using BE_AgentGuard.Models;
 using System.Drawing;
 using BE_AgentGuard.RouteModel;
 using BE_AgentGuard.FuncMove;
+using BE_AgentGuard.Servrices;
+using BE_AgentGuard.Interface;
 
 namespace BE_AgentGuard.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AgentsController : ControllerBase
     {
         private readonly BE_AgentGuardContext _context;
-        public Move move;
-
         public AgentsController(BE_AgentGuardContext context)
         {
             _context = context;
@@ -45,68 +45,61 @@ namespace BE_AgentGuard.Controllers
             return agent;
         }
 
-        [HttpPut("{id}/pin")]
-        public async Task<IActionResult> PinAgent(int id, RouteModel.Point point)
+        [HttpPut("/agents/{id}/pin")]
+        public async Task<IActionResult> PinAgent( int id, [FromBody] RouteModel.Point point)
         {            
-            Agent agent = await _context.Agent.FirstAsync(user => user.id == id);
-            agent.Point = point;
-            try
+            Agent agent = await _context.Agent.FindAsync(id);
+            if (agent.point.OnTheMap)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AgentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest("the agent is already pined");
             }
 
-            return NoContent();
+            _context.SaveChangesAsync();
+            List<Target> targets = await _context.Target.Where(t => t.is_active).ToListAsync();
+            MissionService missionService = new(agent, targets.Cast<IPerson>().ToList());
+            List<Mission> missions =  missionService.CheckMission();
+            await _context.SaveChangesAsync();
+            return  Ok("the agent is pined successfully"); 
         }
         [HttpPut("{id}/move")]
-        public async Task<IActionResult> MoveAgent(int id,Directions directions)
-        {
-            Agent agent = _context.Agent.Find(id);
-            move = new Move(agent.Point);
-            agent.Point = move.Change(directions);
-            return NoContent();
-        }
-       
-
-
-        [HttpPost]
-        public async Task<ActionResult<Agent>> PostAgent(Agent agent)
-        {
-            _context.Agent.Add(agent);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetAgent", new { id = agent.id }, agent);
-        }
-
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAgent(int id)
+        public async Task<IActionResult> MoveAgent([FromRoute] int id, [FromBody] Directions directions)
         {
             var agent = await _context.Agent.FindAsync(id);
             if (agent == null)
             {
-                return NotFound();
+                return NotFound("Agent not found");
             }
 
-            _context.Agent.Remove(agent);
+            if (agent.is_active)
+            {
+                return BadRequest("The agent is in mission");
+            }
+            if (!agent.point.OnTheMap)
+            {
+                return BadRequest("The agent is not on the map");
+            }
+
+            var move = new Move(agent.point, agent);
+            agent = (Agent)move.ChangeFree(directions);
+
+
+            _context.Update(agent);
             await _context.SaveChangesAsync();
+            List<Target> targets =  await _context.Target.Where<Target>(t =>  t.is_active).ToListAsync();
+            MissionService missionService = new(agent, targets.Cast<IPerson>().ToList());
 
-            return NoContent();
+            return Ok("The agent is moved successfully");
         }
-
+        [HttpPost]
+        public async Task<ActionResult<Agent>> PostAgent([FromBody]Agent agent)
+        {
+            _context.Agent.Add(agent);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction("GetAgent", new { id = agent.Id },agent);
+        }
         private bool AgentExists(int id)
         {
-            return _context.Agent.Any(e => e.id == id);
+            return _context.Agent.Any(e => e.Id == id);
         }
     }
 }

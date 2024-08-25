@@ -9,6 +9,7 @@ namespace BE_AgentGuard.Models
         public Agent Agent { get; set; }
         public int targetID { get; set; }
         public Target Target { get; set; }
+        public double distance { get; set; }
         public TimeOnly missionStart { get; set; }
         public TimeOnly duration { get; set; }
         public TimeOnly remainingTime { get; set; }

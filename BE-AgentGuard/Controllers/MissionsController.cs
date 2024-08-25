@@ -15,20 +15,15 @@ namespace BE_AgentGuard.Controllers
     public class MissionsController : ControllerBase
     {
         private readonly BE_AgentGuardContext _context;
-
         public MissionsController(BE_AgentGuardContext context)
         {
             _context = context;
         }
-
-        // GET: api/Missions
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mission>>> GetMission()
         {
             return await _context.Mission.ToListAsync();
         }
-
-        // GET: api/Missions/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Mission>> GetMission(int id)
         {
@@ -41,9 +36,6 @@ namespace BE_AgentGuard.Controllers
 
             return mission;
         }
-
-        // PUT: api/Missions/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMission(int id, Mission mission)
         {
@@ -72,9 +64,6 @@ namespace BE_AgentGuard.Controllers
 
             return NoContent();
         }
-
-        // POST: api/Missions
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Mission>> PostMission(Mission mission)
         {
@@ -83,8 +72,6 @@ namespace BE_AgentGuard.Controllers
 
             return CreatedAtAction("GetMission", new { id = mission.Id }, mission);
         }
-
-        // DELETE: api/Missions/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMission(int id)
         {
@@ -99,7 +86,6 @@ namespace BE_AgentGuard.Controllers
 
             return NoContent();
         }
-
         private bool MissionExists(int id)
         {
             return _context.Mission.Any(e => e.Id == id);
