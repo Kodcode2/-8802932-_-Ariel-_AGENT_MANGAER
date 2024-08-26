@@ -2,9 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using FE_AgentGuard.Data;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<FE_AgentGuardContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("FE_AgentGuardContext") ?? throw new InvalidOperationException("Connection string 'FE_AgentGuardContext' not found.")));
-
 builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -28,6 +25,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=General}/{action=Index}/{id?}");
 
 app.Run();

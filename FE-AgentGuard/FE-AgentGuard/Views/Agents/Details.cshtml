@@ -11,44 +11,38 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.nickname)
+            שם כינוי
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.nickname)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.x)
+            מיקום בציר X
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.x)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.y)
+            מיקום על ציר Y
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.y)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_active)
+            בפעילות
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_active)
+            @(Model.is_active? "בפעולה":"רדום")
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.photoUrl)
+            תמונה
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.photoUrl)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.color)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.color)
+        <dd class="col-sm-2">
+            <img src="@Model.photoUrl" alt="Photo of @Model.nickname" class="agent-photo" />
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> 
     <a asp-action="Index">Back to List</a>
 </div>

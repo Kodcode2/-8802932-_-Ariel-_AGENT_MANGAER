@@ -5,6 +5,7 @@ using BE_AgentGuard.Interface;
 using BE_AgentGuard.Models;
 using BE_AgentGuard.RouteModel;
 using Microsoft.Ajax.Utilities;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 
@@ -30,6 +31,7 @@ namespace BE_AgentGuard.Servrices
         }
         public List<Mission> CheckMission()
         {
+            
             List<IPerson> personsInRange = CheckPersonsInRange();
             List<Mission> missions = new();
             Type type = person.GetType();
@@ -88,12 +90,35 @@ namespace BE_AgentGuard.Servrices
             }                
             return agents;
         }
-        public void Kill(List<Agent> agents) 
+        public static int Kill(Agent agent,Mission mission,Target target) 
         {
-            foreach (var agent in agents)
+                agent.is_active = false;
+                target.is_active = true;
+                return mission.Id;
+            
+        }
+        public static bool ChanceToKill(Agent agent, Target target) 
+        {
+            if (agent.point == target.point) { return true; }
+            return false;
+        }
+        public static List<int> CheckExpiredMission(List<Mission> missions)
+        {
+            List<int> intsMissionToDelete = new List<int>();
+            foreach (var item in missions)
             {
-                
+                if (item.distance>200)
+                {
+                    intsMissionToDelete.Add(item.Id);
+                }
             }
+            return intsMissionToDelete;
+        }
+
+        public static TimeSpan duration(TimeOnly start)
+        {
+            TimeOnly now = TimeOnly.FromDateTime(DateTime.Now);
+            return now - start;
         }
     }
 }

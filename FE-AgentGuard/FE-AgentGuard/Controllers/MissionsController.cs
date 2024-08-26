@@ -7,37 +7,44 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FE_AgentGuard.Data;
 using FE_AgentGuard.Models.Models;
+using FE_AgentGuard.ServerHandling;
+using BE_AgentGuard.Enums;
+using FE_AgentGuard.Models.ServerModel;
 
 namespace FE_AgentGuard.Controllers
 {
     public class MissionsController : Controller
     {
-        private readonly FE_AgentGuardContext _context;
+        private readonly HttpClient _httpClient;
+        private readonly string _url;
+        private readonly MissionServer server;
 
-        public MissionsController(FE_AgentGuardContext context)
+        public MissionsController(HttpClient httpClient)
         {
-            _context = context;
+            _httpClient = httpClient;
+            _url = "http://localhost:5149/missions";
+            server = new(_httpClient, _url);
         }
-
-        // GET: Missions
         public async Task<IActionResult> Index()
         {
-            var fE_AgentGuardContext = _context.Mission.Include(m => m.Agent).Include(m => m.Target);
-            return View(await fE_AgentGuardContext.ToListAsync());
+            //var fE_AgentGuardContext = _context.Mission.Include(m => m.Agent).Include(m => m.Target);
+            MissionServer server = new(_httpClient, _url);
+            return View(await server.GetObjectsAsync());
         }
 
-        // GET: Missions/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var mission = await _context.Mission
-                .Include(m => m.Agent)
-                .Include(m => m.Target)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            //var mission = await _context.Mission
+            //    .Include(m => m.Agent)
+            //    .Include(m => m.Target)
+            //    .FirstOrDefaultAsync(m => m.Id == id);
+            MissionServer server = new(_httpClient, _url);
+            Mission mission = await server.GetObjectAsync(id);
             if (mission == null)
             {
                 return NotFound();
@@ -45,126 +52,15 @@ namespace FE_AgentGuard.Controllers
 
             return View(mission);
         }
-
-        // GET: Missions/Create
-        public IActionResult Create()
+        //https://localhost:7254/Missions/assigned/1
+        [HttpPost("missions/assigned/{id}")]
+        public async Task<IActionResult> assigned(int id)
         {
-            ViewData["agentID"] = new SelectList(_context.Set<Agent>(), "Id", "Id");
-            ViewData["targetID"] = new SelectList(_context.Set<Target>(), "Id", "Id");
-            return View();
-        }
-
-        // POST: Missions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,agentID,targetID,distance,missionStart,duration,remainingTime,status")] Mission mission)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(mission);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["agentID"] = new SelectList(_context.Set<Agent>(), "Id", "Id", mission.agentID);
-            ViewData["targetID"] = new SelectList(_context.Set<Target>(), "Id", "Id", mission.targetID);
-            return View(mission);
-        }
-
-        // GET: Missions/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var mission = await _context.Mission.FindAsync(id);
-            if (mission == null)
-            {
-                return NotFound();
-            }
-            ViewData["agentID"] = new SelectList(_context.Set<Agent>(), "Id", "Id", mission.agentID);
-            ViewData["targetID"] = new SelectList(_context.Set<Target>(), "Id", "Id", mission.targetID);
-            return View(mission);
-        }
-
-        // POST: Missions/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,agentID,targetID,distance,missionStart,duration,remainingTime,status")] Mission mission)
-        {
-            if (id != mission.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(mission);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!MissionExists(mission.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["agentID"] = new SelectList(_context.Set<Agent>(), "Id", "Id", mission.agentID);
-            ViewData["targetID"] = new SelectList(_context.Set<Target>(), "Id", "Id", mission.targetID);
-            return View(mission);
-        }
-
-        // GET: Missions/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var mission = await _context.Mission
-                .Include(m => m.Agent)
-                .Include(m => m.Target)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (mission == null)
-            {
-                return NotFound();
-            }
-
-            return View(mission);
-        }
-
-        // POST: Missions/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var mission = await _context.Mission.FindAsync(id);
-            if (mission != null)
-            {
-                _context.Mission.Remove(mission);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool MissionExists(int id)
-        {
-            return _context.Mission.Any(e => e.Id == id);
+            string token = "123";
+            StatusMission status = StatusMission.ASSIGNED;
+            MissionAssigned mission = new(token, status);
+           await server.UpdateObjectAsync(mission, id);
+            return RedirectToAction("Index");            
         }
     }
 }

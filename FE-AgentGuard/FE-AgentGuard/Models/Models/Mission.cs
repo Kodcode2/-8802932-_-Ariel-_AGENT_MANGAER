@@ -12,7 +12,7 @@ namespace FE_AgentGuard.Models.Models
         public double distance { get; set; }
         public TimeOnly missionStart { get; set; }
         public TimeOnly duration { get; set; }
-        public TimeOnly remainingTime { get; set; }
+        public int remainingTime { get; set; }
         public StatusMission status { get; set; }
         public Mission() { }
     }

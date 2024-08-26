@@ -66,7 +66,7 @@ namespace BE_AgentGuard.Migrations
                     b.Property<double>("distance")
                         .HasColumnType("float");
 
-                    b.Property<TimeOnly>("duration")
+                    b.Property<TimeSpan>("duration")
                         .HasColumnType("time");
 
                     b.Property<TimeOnly>("missionStart")

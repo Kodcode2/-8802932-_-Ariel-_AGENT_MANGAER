@@ -51,14 +51,7 @@ namespace BE_AgentGuard.Controllers
             bool start = move.Start();
             if (!start) { return BadRequest("the target is already pined"); }
             _context.SaveChanges();
-            List<Agent> agents = await _context.Agent.Where(t => t.is_active).ToListAsync();
-            MissionService missionService = new(target, agents.Cast<IPerson>().ToList());
-            List<Mission> missions = missionService.CheckMission();
-            foreach (var item in missions)
-            {
-                _context.Add(item);
-            }
-            await _context.SaveChangesAsync();
+            CheckMission(target);
             return Ok("the agent is pined successfully");
         }
         [HttpPut("{id}/move")]
@@ -71,8 +64,30 @@ namespace BE_AgentGuard.Controllers
                 BadRequest("Sorry, but the target has been eliminated");
             }
             Move move = new Move(target.point, target);
-            move.ChangeFree(direction);
+            target = (Target)move.ChangeFree(direction);
+            _context.Update(target);
             await _context.SaveChangesAsync();
+
+
+            return Ok("the agent is moved successfully");
+        }
+        [HttpPost]
+        public async Task<ActionResult<Target>> PostTarget(PostTarget postTarget)
+        {
+            Target target = new();
+            target.name = postTarget.name;
+            target.position = postTarget.position;
+            target.photoUrl = postTarget.photoUrl;
+            _context.Target.Add(target);
+            await _context.SaveChangesAsync();
+            return Created("", new { id = target.Id });
+        }
+        private bool TargetExists(int id)
+        {
+            return _context.Target.Any(e => e.Id == id);
+        }
+       async Task CheckMission(Target target)
+        {
             List<Agent> agents = await _context.Agent.Where(t => t.is_active).ToListAsync();
             MissionService missionService = new(target, agents.Cast<IPerson>().ToList());
             List<Mission> missions = missionService.CheckMission();
@@ -81,18 +96,6 @@ namespace BE_AgentGuard.Controllers
                 _context.Add(item);
             }
             await _context.SaveChangesAsync();
-            return Ok("the agent is moved successfully");
-        }
-        [HttpPost]
-        public async Task<ActionResult<Target>> PostTarget(Target target)
-        {
-            _context.Target.Add(target);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetTarget", new { id = target.Id }, target);
-        }
-        private bool TargetExists(int id)
-        {
-            return _context.Target.Any(e => e.Id == id);
         }
     }
 }

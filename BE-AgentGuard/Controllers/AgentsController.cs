@@ -54,7 +54,7 @@ namespace BE_AgentGuard.Controllers
                 return BadRequest("the agent is already pined");
             }
             agent.point = point;
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             List<Target> targets = await _context.Target.Where(t => !t.is_active).ToListAsync();
             MissionService missionService = new(agent, targets.Cast<IPerson>().ToList());
             List<Mission> missions = missionService.CheckMission();
@@ -85,6 +85,7 @@ namespace BE_AgentGuard.Controllers
 
             var move = new Move(agent.point, agent);
             agent = (Agent)move.ChangeFree(directions);
+            if (agent is null) { return BadRequest("The map is over"); }
 
 
             _context.Update(agent);
@@ -101,11 +102,14 @@ namespace BE_AgentGuard.Controllers
             return Ok("The agent is moved successfully");
         }
         [HttpPost]
-        public async Task<ActionResult<Agent>> PostAgent([FromBody] Agent agent)
+        public async Task<ActionResult<Agent>> PostAgent([FromBody] PostAgent postAgent)
         {
+            Agent agent = new();
+            agent.photoUrl = postAgent.photoUrl;
+            agent.nickname = postAgent.nickname;
             _context.Agent.Add(agent);
             await _context.SaveChangesAsync();
-            return CreatedAtAction("GetAgent", new { id = agent.Id }, agent);
+            return Created("", new { id = agent.Id });
         }
         private bool AgentExists(int id)
         {

@@ -7,6 +7,7 @@ namespace BE_AgentGuard.Interface
 {
     public abstract class IPerson
     {
+
         private RouteModel.Point _point;
         public int Id { get; set; }
         public int x { get; set; } = -1;

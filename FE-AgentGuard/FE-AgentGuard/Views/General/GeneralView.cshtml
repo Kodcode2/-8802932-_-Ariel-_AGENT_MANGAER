@@ -1,14 +1,14 @@
 ﻿@using FE_AgentGuard.InterFaces
 @using FE_AgentGuard.Models.ServerModel
+@using FE_AgentGuard.Models.Models
 @model FE_AgentGuard.Models.ViewModel.General
+
 
 @{
     ViewData["Title"] = "GeneralView";
 }
-
-<!DOCTYPE html>
-<html>
 <head>
+<meta http-equiv="refresh" content="1"></meta>
     <title>Agent Guard</title>
     <style>
         table {
@@ -89,12 +89,23 @@
         .column ul {
             padding: 0;
             list-style-type: none;
-        }
+        }יופי
     </style>
 </head>
 <body>
     <h1>תצוגה כללית</h1>
-
+    <h3>סוכנים</h3>
+    <div>
+    [סוכנים מצוותים: @(AgentAssigned(Model.agents)[0]) כל הסוכנים: @(AgentAssigned(Model.agents)[1])]
+    </div>
+    <h3>משימות</h3>
+    <div>
+        [משימות מוצעות: @(missionCount(Model.missions)[0]) משימות מצוותות: @(missionCount(Model.missions)[1]) משימות שהסתיימו: @(missionCount(Model.missions)[2]) כל המשימות: @(missionCount(Model.missions)[3])]
+    </div>
+    <h3>מטרות</h3>
+    <div>
+    [מטרות מתות:  @(TargetAssigned(Model.targets)[0])  כל המטרות:  @(TargetAssigned(Model.targets)[1])]
+    </div>
     <table>
         @for (int i = 0; i < 100; i++)
         {
@@ -129,7 +140,7 @@
                             <li class="agent-item">
                                 <img src="@agent.photoUrl" alt="Photo of @agent.nickname" class="agent-photo" />
                                 <div class="agent-info">
-                                        <a href="@Url.Action("Details", "Targets", new { id = agent.Id })" class="agent-nickname">
+                                        <a href="@Url.Action("Details", "agents", new { id = agent.Id })" class="agent-nickname">
                                 @agent.nickname
                                     </a>
                                     <span class="agent-status">
@@ -149,7 +160,7 @@
                             <li class="agent-item">
                                 <img src="@target.photoUrl" alt="Photo of @target.name" class="agent-photo" />
                                 <div class="agent-info">
-                                    <a href="@Url.Action( "Details","Agents", new { id = target.Id })" class="agent-nickname">
+                                    <a href="@Url.Action( "Details","targets", new { id = target.Id })" class="agent-nickname">
                                 @target.name
                                     </a>
                                     <span class="agent-status">
@@ -171,6 +182,58 @@
         {
             return person.color;
         }
-        return "white"; // צבע ברירת מחדל
+        return "white"; 
+    }
+    private List<int> AgentAssigned(List<Agent> agents)
+    {
+        int all = 0;
+        int assigned = 0;
+        foreach (var agent in agents)
+        {
+            all++;
+            if (!agent.is_active)
+            {
+                assigned++;
+            }
+        }
+        return new List<int> {assigned,all };
+    }
+    private List<int> missionCount(List<Mission> missions)
+    {
+        int assigned = 0;
+        int compllete = 0;
+        int pending = 0;
+        int all = 0;
+        foreach (var mission in missions)
+        {
+            all++;
+            switch (mission.status)
+            {
+                case BE_AgentGuard.Enums.StatusMission.ASSIGNED:
+                    assigned++;
+                    break;
+                case BE_AgentGuard.Enums.StatusMission.PENDING:
+                    pending++;
+                    break;
+                case BE_AgentGuard.Enums.StatusMission.COMPLETED:
+                    compllete++;
+                    break;
+            }
+        }
+        return new List<int> { pending, assigned, compllete, all };
+    }
+    private List<int> TargetAssigned(List<Target> targets)
+    {
+        int all = 0;
+        int dead = 0;
+        foreach (var target in targets)
+        {
+            all++;
+            if (target.is_active)
+            {
+                dead++;
+            }
+        }
+        return new List<int> { dead, all };
     }
 }

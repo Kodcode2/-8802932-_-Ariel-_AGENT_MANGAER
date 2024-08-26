@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "agent",
-        "Type": "BE_AgentGuard.Models.Agent",
+        "Name": "postAgent",
+        "Type": "BE_AgentGuard.RouteModel.PostAgent",
         "IsRequired": true
       }
     ],
@@ -231,6 +231,22 @@
     ]
   },
   {
+    "ContainingType": "BE_AgentGuard.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginModel",
+        "Type": "BE_AgentGuard.RouteModel.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "GetMissions",
     "RelativePath": "Missions",
@@ -241,32 +257,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[BE_AgentGuard.Models.Mission, BE-AgentGuard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
-    "Method": "PostMission",
-    "RelativePath": "Missions",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "mission",
-        "Type": "BE_AgentGuard.Models.Mission",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Int32",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -337,11 +327,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
-    "Method": "Update",
+    "Method": "UpdateAgents",
     "RelativePath": "Missions/mission/update",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -378,8 +374,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "target",
-        "Type": "BE_AgentGuard.Models.Target",
+        "Name": "postTarget",
+        "Type": "BE_AgentGuard.RouteModel.PostTarget",
         "IsRequired": true
       }
     ],

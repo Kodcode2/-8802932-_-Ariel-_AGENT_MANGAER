@@ -26,6 +26,8 @@ namespace BE_AgentGuard.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mission>>> GetMissions()
         {
+            CheckMissionExpire();
+            UpdateMissions();
             return await _context.Mission.ToListAsync();
         }
         //public List<Mission> GetMissionsAssigned()
@@ -47,15 +49,22 @@ namespace BE_AgentGuard.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMission(int id, [FromBody] MissionAssigned missionAssigned)
         {
-            Mission mission = _context.Mission.Find(id);
+            var mission = _context.Mission
+    .Include(m => m.Agent)
+    .Include(m => m.Target)
+    .FirstOrDefault(m => m.Id == id);
             TimeOnly timeNow = TimeOnly.FromDateTime(DateTime.Now);
             mission.missionStart = timeNow;
             mission.remainingTime = (int)mission.distance / 5;
+            mission.duration = new TimeSpan();
             mission.status = missionAssigned.statusMission;
+            mission.Agent.is_active = true;
+            _context.Update(mission);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
         [HttpPut("mission/update")]
-        public async Task<IActionResult> Update()
+        public async Task<IActionResult> UpdateAgents()
         {
 
             List<Agent> agents = _context.Agent.Where(status => status.is_active).ToList();
@@ -63,35 +72,77 @@ namespace BE_AgentGuard.Controllers
             foreach (var agent in Agents)
             {
                 _context.Agent.Update(agent);
+
             }
             _context.SaveChanges();
+            CheckKills();
+
+
             return NoContent();
         }
-        [HttpPost]
-        public async Task<int> PostMission(Mission mission)
+        private void UpdateMissions()
         {
-            _context.Mission.Add(mission);
-            await _context.SaveChangesAsync();
+            var missions = _context.Mission
+    .Include(m => m.Agent)
+    .Include(m => m.Target)
+    .Where(m => m.status == Enums.StatusMission.ASSIGNED);
+            foreach (var item in missions)
+            {
+                PointCalculations point = new(item.Agent.point, item.Target.point);
+                item.duration = MissionService.duration(item.missionStart);
+                item.distance = point.difference();
+                item.remainingTime = (int)point.difference() / 5;
+                _context.Update(item);
 
-            return mission.Id;
+            }
+            _context.SaveChanges();
         }
+        //[HttpPost]
+        //public async Task<int> PostMission(Mission mission)
+        //{
+        //    _context.Mission.Add(mission);
+        //    await _context.SaveChangesAsync();
+
+        //    return mission.Id;
+        //}
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMission(int id)
+        public async void DeleteMission(int id)
         {
             var mission = await _context.Mission.FindAsync(id);
-            if (mission == null)
-            {
-                return NotFound();
-            }
-
             _context.Mission.Remove(mission);
             await _context.SaveChangesAsync();
 
-            return Ok("mission is deleted successfully"); ;
+            return;
         }
         private bool MissionExists(int id)
         {
             return _context.Mission.Any(e => e.Id == id);
         }
+        private void CheckKills()
+        {
+            var mission = _context.Mission
+                .Include(m => m.Agent)
+                .Include(m => m.Target)
+                .Where(m => m.status == Enums.StatusMission.ASSIGNED);
+            foreach (var item in mission)
+            {
+                if (item.Target.point == item.Agent.point)
+                {
+                    MissionService.Kill(item.Agent, item, item.Target);
+                    _context.Mission.Remove(item);
+                }
+            }
+            _context.SaveChanges();
+        }
+        private void CheckMissionExpire()
+        {
+            List<Mission> missionToCheck = _context.Mission.Where(s => s.status == Enums.StatusMission.PENDING).ToList();
+            List<int> intsMissionsToDelete = MissionService.CheckExpiredMission(missionToCheck);
+            for (int i = 0; i < intsMissionsToDelete.Count; i++)
+            {
+                DeleteMission(intsMissionsToDelete[i]);
+            }
+        }
+
     }
 }

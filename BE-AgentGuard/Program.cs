@@ -28,7 +28,7 @@ namespace BE_AgentGuard
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseMiddleware<MiddlewareAccess>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

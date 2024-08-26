@@ -4,31 +4,25 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>סוכנים</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.nickname)
+                שם
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.x)
+                מיקום בציר X
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.y)
+                מיקום בציר Y
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_active)
+                בפעולה
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.photoUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.color)
+                תמונה
             </th>
             <th></th>
         </tr>
@@ -45,19 +39,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.y)
             </td>
+                <td>
+                    @(item.is_active ? "בפעולה" : "רדום")
+                </td>
+                <td>
+                    <img src="@item.photoUrl" alt="Photo of @item.nickname" class="agent-photo" />
+                </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.photoUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.color)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <div class="btn btn btn-primary"><a asp-action="Details" asp-route-id="@item.Id">Details</a> </div>
             </td>
         </tr>
 }

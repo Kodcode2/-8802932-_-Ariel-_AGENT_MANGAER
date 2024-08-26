@@ -11,7 +11,7 @@ namespace BE_AgentGuard.Models
         public Target Target { get; set; }
         public double distance { get; set; }
         public TimeOnly missionStart { get; set; }
-        public TimeOnly duration { get; set; }
+        public TimeSpan duration { get; set; }
         public int remainingTime { get; set; }
         public StatusMission status { get; set; }
     }

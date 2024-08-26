@@ -20,9 +20,9 @@ namespace FE_AgentGuard.Controllers
         public GeneralController(HttpClient HttpClient)
         {
             httpClient = HttpClient;
-            urlAgent = "https://localhost:7030/Agents";
-            urlTarget = "https://localhost:7030/Targets";
-            urlMission = "https://localhost:7030/missions";
+            urlAgent = "http://localhost:5149/Agents";
+            urlTarget = "http://localhost:5149/Targets";
+            urlMission = "http://localhost:5149/missions";
         }
 
         public async Task<ActionResult> GeneralView()
@@ -54,7 +54,6 @@ namespace FE_AgentGuard.Controllers
             return View(general);
         }
 
-        // GET: GeneralController1/Details/5
         public async Task<ActionResult> Details(int id)
         {
             PersonServer server = new(httpClient, urlAgent);
@@ -62,68 +61,7 @@ namespace FE_AgentGuard.Controllers
             return View(person);
         }
 
-        // GET: GeneralController1/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
 
-        // POST: GeneralController1/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: GeneralController1/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: GeneralController1/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: GeneralController1/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: GeneralController1/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
         public string changeColor(Person person)
         {
             if(person is Agent)

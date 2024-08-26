@@ -1,6 +1,7 @@
 ﻿using FE_AgentGuard.Interfaces;
 using FE_AgentGuard.InterFaces;
 using FE_AgentGuard.Models.Models;
+using FE_AgentGuard.Models.ServerModel;
 using System;
 using System.Security;
 
@@ -36,7 +37,7 @@ namespace FE_AgentGuard.ServerHandling
             var createdPost = await response.Content.ReadFromJsonAsync<Mission>();
             return createdPost;
         }
-        public async Task UpdateObjectAsync(Mission person,int id)
+        public async Task UpdateObjectAsync(MissionAssigned person,int id)
         {
             var response = await _httpClient.PutAsJsonAsync($"{Url}/{id}", person);
             response.EnsureSuccessStatusCode();

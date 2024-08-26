@@ -6,9 +6,6 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -37,35 +34,61 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Agent.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Target.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.distance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.missionStart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.remainingTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Agent.nickname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Target.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.distance)
+                </td>
+                <td>
+                    @if (item.status == BE_AgentGuard.Enums.StatusMission.PENDING)
+                    {
+                        <div>----</div>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.missionStart)
+                    }
+                </td>
+                <td>
+                    @if (item.status == BE_AgentGuard.Enums.StatusMission.PENDING)
+                    {
+                        <div>----</div>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.duration)
+                    }
+                </td>
+                <td>
+                    @if (item.status == BE_AgentGuard.Enums.StatusMission.PENDING)
+                    {
+                        <div>----</div>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.remainingTime)
+                    }
+                </td>
+                <td>
+                    @if (item.status == BE_AgentGuard.Enums.StatusMission.PENDING)
+                    {
+                        <form asp-action="assigned" asp-route-id="@item.Id" method="post">
+                            <button type="submit" class="btn btn-primary">ציוות</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="btn btn-secondary disabled">בפעולה</div>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
