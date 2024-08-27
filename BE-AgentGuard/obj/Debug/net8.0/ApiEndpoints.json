@@ -338,8 +338,8 @@
   {
     "ContainingType": "BE_AgentGuard.Controllers.MissionsController",
     "Method": "UpdateAgents",
-    "RelativePath": "Missions/mission/update",
-    "HttpMethod": "PUT",
+    "RelativePath": "Missions/update",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

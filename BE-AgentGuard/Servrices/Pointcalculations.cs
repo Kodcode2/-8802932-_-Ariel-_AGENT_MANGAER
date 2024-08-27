@@ -28,28 +28,31 @@ namespace BE_AgentGuard.Servrices
         public Directions Steps()
         {
             Directions directions = new Directions();
-            Point distancePoint = new(subtractMinFromMax(point1.X, point2.X), subtractMinFromMax(point1.Y, point2.Y));
-            if(distancePoint.X > 0)
+            Point distancePoint = new Point(point2.X-point1.X,  point2.Y- point1.Y );
+
+            if (distancePoint.X > 0)
             {
                 directions.direction += "e";
             }
-            if(distancePoint.X < 0)
+            if (distancePoint.X < 0)
             {
                 directions.direction += "w";
             }
-            if(distancePoint.Y > 0)
-            {
-                directions.direction += "s";
-            }
-            if(distancePoint.Y < 0)
+            if (distancePoint.Y > 0)
             {
                 directions.direction += "n";
             }
+            if (distancePoint.Y < 0)
+            {
+                directions.direction += "s";
+            }
+
             return directions;
         }
+
         public int subtractMinFromMax(int num1 , int num2)
         {
-            if (num1 < num2) { return num1 - num2; }
+            if (num1 > num2) { return num1 - num2; }
             return num2-num1;
         }
     }

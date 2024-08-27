@@ -16,6 +16,7 @@ namespace BE_AgentGuard.FuncMove
         }
         public IPerson  ChangeFree(Directions directions)
         {
+            if(directions.direction is null) { return person; }
             if (directions.direction.Contains("n"))
             {
                 _point.Y++;
@@ -32,7 +33,7 @@ namespace BE_AgentGuard.FuncMove
             {
                 _point.X--;
             }
-            if(_point.X <= 0 || _point.Y <= 0 || _point.X > 25 || _point.Y >= 25) { return null; }
+            if(_point.X <= 0 || _point.Y <= 0 || _point.X > 25 || _point.Y >= 25) { return person; }
             person.point = _point;
             return person;
         }

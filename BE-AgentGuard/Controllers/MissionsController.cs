@@ -83,15 +83,19 @@ namespace BE_AgentGuard.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-        [HttpPut("mission/update")]
+        [HttpPost("update")]
         public async Task<IActionResult> UpdateAgents()
         {
 
             List<Agent> agents = _context.Agent.Where(status => status.is_active).ToList();
-            List<Agent> Agents = MissionService.MoveAgentAssigned(agents);
-            foreach (var agent in Agents)
+            List<Mission> missions =_context.Mission
+    .Include(m => m.Agent)
+    .Include(m => m.Target)
+    .Where(m => m.status == Enums.StatusMission.ASSIGNED).ToList();
+            missions = MissionService.MoveAgentAssigned(missions);
+            foreach (var mission in missions)
             {
-                _context.Agent.Update(agent);
+                _context.Update(mission);
 
             }
             _context.SaveChanges();
@@ -126,7 +130,7 @@ namespace BE_AgentGuard.Controllers
         //    return mission.Id;
         //}
         [HttpDelete("{id}")]
-        public async void DeleteMission(int id)
+        public async Task DeleteMission(int id)
         {
             var mission = await _context.Mission.FindAsync(id);
             _context.Mission.Remove(mission);
@@ -156,15 +160,15 @@ namespace BE_AgentGuard.Controllers
             }
             _context.SaveChanges();
         }
-        private void CheckMissionExpire()
+        private async Task CheckMissionExpire()
         {
             List<Mission> missionToCheck = _context.Mission.Include(m => m.Agent)
                 .Include(m => m.Target)
-                .Where(m => m.status == Enums.StatusMission.ASSIGNED).ToList();
+                .Where(m => m.status == Enums.StatusMission.PENDING).ToList();
             List<int> intsMissionsToDelete = MissionService.CheckExpiredMission(missionToCheck);
             for (int i = 0; i < intsMissionsToDelete.Count; i++)
             {
-                DeleteMission(intsMissionsToDelete[i]);
+               await DeleteMission(intsMissionsToDelete[i]);
             }
         }
 

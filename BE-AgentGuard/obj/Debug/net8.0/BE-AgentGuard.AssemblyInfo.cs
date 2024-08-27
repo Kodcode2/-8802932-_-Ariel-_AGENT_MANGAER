@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BE-AgentGuard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db9265c7a372d41b945a253d9585dc729e9e7ad6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ef5f5e0d8123d830b1c6713aa18744104ea46a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("BE-AgentGuard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BE-AgentGuard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

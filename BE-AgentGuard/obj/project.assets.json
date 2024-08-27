@@ -8694,23 +8694,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
+    "C:\\Users\\yair1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\BE-AgentGuard\\BE-AgentGuard.csproj",
+      "projectUniqueName": "C:\\Users\\yair1\\Source\\Repos\\-8802932-_-Ariel-_AGENT_MANGAER\\BE-AgentGuard\\BE-AgentGuard.csproj",
       "projectName": "BE-AgentGuard",
-      "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\BE-AgentGuard\\BE-AgentGuard.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\BE-AgentGuard\\obj\\",
+      "projectPath": "C:\\Users\\yair1\\Source\\Repos\\-8802932-_-Ariel-_AGENT_MANGAER\\BE-AgentGuard\\BE-AgentGuard.csproj",
+      "packagesPath": "C:\\Users\\yair1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yair1\\Source\\Repos\\-8802932-_-Ariel-_AGENT_MANGAER\\BE-AgentGuard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yair1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8793,7 +8793,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

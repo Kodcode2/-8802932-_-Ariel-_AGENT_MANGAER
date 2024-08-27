@@ -82,18 +82,18 @@ namespace BE_AgentGuard.Servrices
             }
             return list;
         }
-        public static List<Agent> MoveAgentAssigned(List<Agent> agents)
+        public static List<Mission> MoveAgentAssigned(List<Mission> missions)
         {
-            foreach (Agent agent in agents)
+            foreach (Mission mission in missions)
             {
-                if (agent.is_active)
+                if ( mission.Agent.is_active)
                 {
-                    PointCalculations a = new(agent.point);
-                    Move b = new(agent.point, agent);
-                    b.ChangeFree(a.Steps());
+                    PointCalculations a = new(mission.Agent.point,mission.Target.point);
+                    Move b = new(mission.Agent.point, mission.Agent);
+                    mission.Agent =  (Agent)b.ChangeFree(a.Steps());
                 }
             }                
-            return agents;
+            return missions;
         }
         public static void Kill(Agent agent,Mission mission,Target target) 
         {
@@ -108,12 +108,12 @@ namespace BE_AgentGuard.Servrices
             if (agent.point == target.point) { return true; }
             return false;
         }
-        public static List<int> (List<Mission> missions)
+        public static List<int> CheckExpiredMission(List<Mission> missions)
         {
             List<int> intsMissionToDelete = new List<int>();
             foreach (var item in missions)
             {
-                if (item.distance>200 || item.Agent.is_active)
+                if (item.distance>200 || (item.Agent.is_active && item.status == Enums.StatusMission.PENDING))
                 {
                     intsMissionToDelete.Add(item.Id);
                 }

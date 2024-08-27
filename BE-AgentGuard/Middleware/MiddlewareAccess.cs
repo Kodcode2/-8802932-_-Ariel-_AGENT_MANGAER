@@ -16,11 +16,11 @@ public class MiddlewareAccess
     public async Task Invoke(HttpContext context)
     {
         await DisFromJson<MissionAssigned>(context);
-        List<string> pathsToSimulation = new List<string> { "/mission/update", "/pin", "/move", };
+        List<string> pathsToSimulation = new List<string> { "/missions/update", "/pin", "/move", };
         List<string> pathsToMVC = new List<string> { "/missions/" };
         List<string> pathsToAll = new List<string> { "/agents", "/targets","/missions" };
 
-        if (pathsToSimulation.Any(path => context.Request.Path.ToString().ToLower().ToLower().Contains(path)))
+        if (pathsToSimulation.Any(path => context.Request.Path.ToString().ToLower().Contains(path)))
         {
             Tokens token = await DisFromJson<Tokens>(context);
             string id = FindToken(token.Token);
