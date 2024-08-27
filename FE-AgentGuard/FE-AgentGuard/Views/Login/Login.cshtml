@@ -1,0 +1,27 @@
+﻿@model FE_AgentGuard.Models.Models.LoginId
+@{
+    ViewData["Title"] = "login";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header text-center">
+                    <h2>התחברות</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Login" method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="id" class="form-label">הכנס את המזהה האישי שלך</label>
+                            <input asp-for="id" class="form-control" placeholder="מזהה אישי" />
+                            <span asp-validation-for="id" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">התחבר</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

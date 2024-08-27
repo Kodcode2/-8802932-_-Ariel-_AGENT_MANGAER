@@ -32,7 +32,7 @@ namespace BE_AgentGuard.FuncMove
             {
                 _point.X--;
             }
-            if(_point.X <= 0 || _point.Y <= 0 || _point.X > 20 || _point.Y <= 0) { return null; }
+            if(_point.X <= 0 || _point.Y <= 0 || _point.X > 25 || _point.Y >= 25) { return null; }
             person.point = _point;
             return person;
         }

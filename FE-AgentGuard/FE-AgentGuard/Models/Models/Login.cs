@@ -1,7 +1,10 @@
-﻿namespace FE_AgentGuard.Models.Models
+﻿using System.Xml.Linq;
+
+namespace FE_AgentGuard.Models.Models
 {
-    public class Login
+    public class LoginId
     {
         public string id { get; set; }
     }
+ 
 }

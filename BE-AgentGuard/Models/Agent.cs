@@ -6,6 +6,7 @@ namespace BE_AgentGuard.Models
     public class Agent : IPerson
     {
         public string nickname { get; set; }
+        public int kills { get; set; }
         public Agent() { }
     } 
 }

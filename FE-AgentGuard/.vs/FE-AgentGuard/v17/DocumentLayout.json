@@ -1,89 +1,92 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\agents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\agents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\targets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\targets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\targets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\targets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\general\\generalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\general\\generalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\targetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\targetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\missionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\missionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\servermodel\\missionassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\servermodel\\missionassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\serverhandling\\missionserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\serverhandling\\missionserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\agents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\agents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\viewmodel\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\viewmodel\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\missions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\missions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\missions\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BE_AgentGuardContext_254a1a41_92de_4649_a201_a7e7beea6cbc/True/SqlTable/dbo.Target.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\servermodel\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\servermodel\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\general\\generalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\general\\generalview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\yair1\\onedrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\generalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\serverhandling\\missionserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\serverhandling\\missionserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\agents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\agents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\targets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\targets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\targets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\targets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\targetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\targetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\controllers\\missionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\controllers\\missionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\servermodel\\missionassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\servermodel\\missionassigned.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\agents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\agents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\viewmodel\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\viewmodel\\general.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\models\\mission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\servermodel\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\servermodel\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|c:\\users\\dell\\onedrive\\desktop\\be-agentguard\\fe-agentguard\\fe-agentguard\\models\\models\\target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AF043201-1021-48EE-804A-D49A8D7A3AB5}|FE-AgentGuard\\FE-AgentGuard.csproj|solutionrelative:fe-agentguard\\models\\models\\target.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -94,85 +97,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 17,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAoAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T15:17:45.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AgentsController.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\AgentsController.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\AgentsController.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\AgentsController.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Controllers\\AgentsController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T14:30:46.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Login.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\Models\\Login.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Login.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Models\\Models\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T15:11:44.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Program.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Program.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Program.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T14:39:10.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GeneralView.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T14:34:36.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "General.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ViewModel\\General.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\ViewModel\\General.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ViewModel\\General.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Models\\ViewModel\\General.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T06:23:18.468Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -180,153 +109,232 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T06:23:02.189Z",
+              "DocumentIndex": 1,
+              "Title": "dbo.Target [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/BE_AgentGuardContext_254a1a41_92de_4649_a201_a7e7beea6cbc/True/SqlTable/dbo.Target.sql",
+              "ToolTip": "dbo.Target [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-26T17:00:26.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Details.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Targets\\Details.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Details.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\Targets\\Details.cshtml",
-              "ViewState": "AgIAACAAAAAAAAAAAADwvzMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T05:18:06.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Index.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Targets\\Index.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Index.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\Targets\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T05:18:05.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Index.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Agents\\Index.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Index.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\Agents\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T05:02:56.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Details.cshtml",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Agents\\Details.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Details.cshtml",
-              "RelativeToolTip": "FE-AgentGuard\\Views\\Agents\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T05:02:54.282Z",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T15:17:45.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MissionsController.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\MissionsController.cs",
-              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\MissionsController.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\MissionsController.cs",
-              "RelativeToolTip": "FE-AgentGuard\\Controllers\\MissionsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Title": "AgentsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\AgentsController.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\AgentsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\AgentsController.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Controllers\\AgentsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:47:47.746Z",
+              "WhenOpened": "2024-08-26T14:30:46.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\Models\\Login.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Login.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Models\\Models\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T15:11:44.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Program.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Program.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T14:39:10.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GeneralView.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\General\\GeneralView.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\General\\GeneralView.cshtml*",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\General\\GeneralView.cshtml*",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAAAKcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T14:34:36.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "General.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ViewModel\\General.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\ViewModel\\General.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ViewModel\\General.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Models\\ViewModel\\General.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T06:23:18.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T06:23:02.189Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Details.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Targets\\Details.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Details.cshtml",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\Targets\\Details.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvzMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T05:18:06.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Index.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Targets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Targets\\Index.cshtml",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\Targets\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T05:18:05.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Index.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Agents\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Index.cshtml",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\Agents\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T05:02:56.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Details.cshtml",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Agents\\Details.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Agents\\Details.cshtml",
+              "RelativeToolTip": "FE-AgentGuard\\Views\\Agents\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-26T05:02:54.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\MissionsController.cs",
+              "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\MissionsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\MissionsController.cs",
+              "RelativeToolTip": "FE-AgentGuard\\Controllers\\MissionsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T14:47:47.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MissionServer.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\ServerHandling\\MissionServer.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\ServerHandling\\MissionServer.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\ServerHandling\\MissionServer.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\ServerHandling\\MissionServer.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\ServerHandling\\MissionServer.cs",
               "RelativeToolTip": "FE-AgentGuard\\ServerHandling\\MissionServer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBAAAAAWAAAAAAAAAA==",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T12:51:18.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "GeneralController.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\GeneralController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\GeneralController.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\GeneralController.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\GeneralController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\GeneralController.cs",
               "RelativeToolTip": "FE-AgentGuard\\Controllers\\GeneralController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBgAAAA6AAAAAAAAAA==",
+              "ViewState": "AQIAABsAAAAAAAAAAAA1wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T18:34:18.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Missions\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Missions\\Index.cshtml",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Missions\\Index.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Missions\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Missions\\Index.cshtml",
               "RelativeToolTip": "FE-AgentGuard\\Views\\Missions\\Index.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAFMAAAAfAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAFMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T16:15:39.22Z"
+              "WhenOpened": "2024-08-25T16:15:39.22Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "MissionAssigned.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
               "RelativeToolTip": "FE-AgentGuard\\Models\\ServerModel\\MissionAssigned.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:28:12.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T16:28:12.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "TargetsController.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\TargetsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\TargetsController.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Controllers\\TargetsController.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\TargetsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Controllers\\TargetsController.cs",
               "RelativeToolTip": "FE-AgentGuard\\Controllers\\TargetsController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T14:48:41.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T14:48:41.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Mission.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Mission.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Mission.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\Models\\Mission.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Mission.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Mission.cs",
               "RelativeToolTip": "FE-AgentGuard\\Models\\Models\\Mission.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -334,11 +342,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Point.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\Point.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\Point.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\ServerModel\\Point.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\Point.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\ServerModel\\Point.cs",
               "RelativeToolTip": "FE-AgentGuard\\Models\\ServerModel\\Point.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAkwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -346,23 +354,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "FE-AgentGuard\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T16:09:14.139Z"
+              "WhenOpened": "2024-08-25T16:09:14.139Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Target.cs",
-              "DocumentMoniker": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Target.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Target.cs",
               "RelativeDocumentMoniker": "FE-AgentGuard\\Models\\Models\\Target.cs",
-              "ToolTip": "C:\\Users\\yair1\\OneDrive\\\u05E9\u05D5\u05DC\u05D7\u05DF \u05D4\u05E2\u05D1\u05D5\u05D3\u05D4\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Target.cs",
+              "ToolTip": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\FE-AgentGuard\\FE-AgentGuard\\Models\\Models\\Target.cs",
               "RelativeToolTip": "FE-AgentGuard\\Models\\Models\\Target.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

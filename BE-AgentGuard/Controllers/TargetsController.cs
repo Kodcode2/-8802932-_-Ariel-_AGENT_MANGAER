@@ -90,7 +90,8 @@ namespace BE_AgentGuard.Controllers
         {
             List<Agent> agents = await _context.Agent.Where(t => t.is_active).ToListAsync();
             MissionService missionService = new(target, agents.Cast<IPerson>().ToList());
-            List<Mission> missions = missionService.CheckMission();
+            List<Mission> missions = _context.Mission.Where(t => t.status == Enums.StatusMission.PENDING).ToList();
+            missions = missionService.CheckMission(missions);
             foreach (var item in missions)
             {
                 _context.Add(item);

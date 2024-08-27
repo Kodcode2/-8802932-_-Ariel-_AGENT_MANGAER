@@ -17,7 +17,7 @@ public class MiddlewareAccess
     {
         await DisFromJson<MissionAssigned>(context);
         List<string> pathsToSimulation = new List<string> { "/mission/update", "/pin", "/move", };
-        List<string> pathsToMVC = new List<string> { "/mission/assigned", "/mission/get" };
+        List<string> pathsToMVC = new List<string> { "/missions/" };
         List<string> pathsToAll = new List<string> { "/agents", "/targets","/missions" };
 
         if (pathsToSimulation.Any(path => context.Request.Path.ToString().ToLower().ToLower().Contains(path)))
@@ -80,7 +80,14 @@ public class MiddlewareAccess
             }
             else
             {
-                await context.Response.WriteAsync("Access denied.");
+                context.Response.StatusCode = StatusCodes.Status403Forbidden; 
+                context.Response.ContentType = "application/json";
+
+                var responseMessage = new { message = "Access denied." };
+                var jsonResponse = JsonConvert.SerializeObject(responseMessage);
+                await context.Response.WriteAsync(jsonResponse);
+
+
             }
         }
     }

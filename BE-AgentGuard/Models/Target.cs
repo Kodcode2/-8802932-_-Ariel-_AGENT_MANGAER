@@ -9,6 +9,6 @@ namespace BE_AgentGuard.Models
     {
         public string name { get; set; }
         public string position { get; set; }
-        public Target() { is_active = false; }
+        public Target() { is_active = true; }
     }
 }

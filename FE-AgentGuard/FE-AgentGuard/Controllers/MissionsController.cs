@@ -18,12 +18,14 @@ namespace FE_AgentGuard.Controllers
         private readonly HttpClient _httpClient;
         private readonly string _url;
         private readonly MissionServer server;
+        private TokenService tokenService;
 
-        public MissionsController(HttpClient httpClient)
+        public MissionsController(HttpClient httpClient, TokenService tokenService)
         {
             _httpClient = httpClient;
             _url = "http://localhost:5149/missions";
             server = new(_httpClient, _url);
+            this.tokenService = tokenService;
         }
         public async Task<IActionResult> Index()
         {
@@ -56,11 +58,11 @@ namespace FE_AgentGuard.Controllers
         [HttpPost("missions/assigned/{id}")]
         public async Task<IActionResult> assigned(int id)
         {
-            string token = "123";
+            string token = tokenService.Token.token;
             StatusMission status = StatusMission.ASSIGNED;
             MissionAssigned mission = new(token, status);
-           await server.UpdateObjectAsync(mission, id);
-            return RedirectToAction("Index");            
+            await server.UpdateObjectAsync(mission, id);
+            return RedirectToAction("Index");
         }
     }
 }

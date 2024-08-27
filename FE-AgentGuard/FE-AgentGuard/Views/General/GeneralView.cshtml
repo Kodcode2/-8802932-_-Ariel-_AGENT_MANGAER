@@ -8,7 +8,7 @@
     ViewData["Title"] = "GeneralView";
 }
 <head>
-<meta http-equiv="refresh" content="1"></meta>
+
     <title>Agent Guard</title>
     <style>
         table {
@@ -89,7 +89,7 @@
         .column ul {
             padding: 0;
             list-style-type: none;
-        }יופי
+        }
     </style>
 </head>
 <body>
@@ -107,16 +107,16 @@
     [מטרות מתות:  @(TargetAssigned(Model.targets)[0])  כל המטרות:  @(TargetAssigned(Model.targets)[1])]
     </div>
     <table>
-        @for (int i = 0; i < 100; i++)
+        @for (int i = 0; i < 30; i++)
         {
                     <tr>
-                @for (int j = 0; j < 100; j++)
+                @for (int j = 0; j < 30; j++)
                 {
                                     <td class="@ChangeColor(j, i)">
                         @{
                             if (Model.persons.TryGetValue(new Point(j, i), out Person a))
                             {
-                                   <a href="@Url.Action("Details", "Targets", new { id = a.Id })" style="display: block; width: 100%; height: 100%;"></a>
+                                   <a href="@Url.Action("Details", @person(a), new { id = a.Id })" style="display: block; width: 100%; height: 100%;"></a>
                             }
                         }
                                     </td>
@@ -157,17 +157,17 @@
             <ul class="agent-list">
                 @foreach (var target in Model.targets)
                 {
-                            <li class="agent-item">
-                                <img src="@target.photoUrl" alt="Photo of @target.name" class="agent-photo" />
-                                <div class="agent-info">
-                                    <a href="@Url.Action( "Details","targets", new { id = target.Id })" class="agent-nickname">
-                                @target.name
-                                    </a>
-                                    <span class="agent-status">
-                                @(target.is_active ? "חי" : "חוסל")
-                                    </span>
-                                </div>
-                            </li>
+                    <li class="agent-item">
+                        <img src="@target.photoUrl" alt="Photo of @target.name" class="agent-photo" />
+                        <div class="agent-info">
+                            <a href="@Url.Action( "Details","targets", new { id = target.Id })" class="agent-nickname">
+                        @target.name
+                            </a>
+                            <span class="agent-status">
+                        @(target.is_active ? "חי" : "חוסל")
+                            </span>
+                        </div>
+                    </li>
                 }
             </ul>
         </div>
@@ -191,7 +191,7 @@
         foreach (var agent in agents)
         {
             all++;
-            if (!agent.is_active)
+            if (agent.is_active)
             {
                 assigned++;
             }
@@ -229,11 +229,16 @@
         foreach (var target in targets)
         {
             all++;
-            if (target.is_active)
+            if (!target.is_active)
             {
                 dead++;
             }
         }
         return new List<int> { dead, all };
+    }
+    private string person(Person a)
+    {
+        if (a is Agent){ return "Agents"; }
+        return "Targets";
     }
 }

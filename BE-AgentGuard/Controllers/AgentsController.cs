@@ -57,7 +57,8 @@ namespace BE_AgentGuard.Controllers
             await _context.SaveChangesAsync();
             List<Target> targets = await _context.Target.Where(t => !t.is_active).ToListAsync();
             MissionService missionService = new(agent, targets.Cast<IPerson>().ToList());
-            List<Mission> missions = missionService.CheckMission();
+            List<Mission> missions = _context.Mission.Where(M => M.status == Enums.StatusMission.PENDING).ToList();
+            missions = missionService.CheckMission(missions);
             foreach (var item in missions)
             {
                 _context.Add(item);
@@ -90,9 +91,10 @@ namespace BE_AgentGuard.Controllers
 
             _context.Update(agent);
             await _context.SaveChangesAsync();
-            List<Target> targets = await _context.Target.Where<Target>(t => !t.is_active).ToListAsync();
+            List<Target> targets = await _context.Target.Where<Target>(t => t.is_active).ToListAsync();
             MissionService missionService = new(agent, targets.Cast<IPerson>().ToList());
-            List<Mission>  missions =  missionService.CheckMission();
+            List<Mission> missions = _context.Mission.Where(t => t.status == Enums.StatusMission.PENDING).ToList();
+            missions =  missionService.CheckMission(missions);
             foreach (var mission in missions)
             {
                 _context.Add(mission);

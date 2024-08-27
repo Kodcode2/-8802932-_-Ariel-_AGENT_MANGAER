@@ -33,6 +33,9 @@ namespace BE_AgentGuard.Migrations
                     b.Property<bool>("is_active")
                         .HasColumnType("bit");
 
+                    b.Property<int>("kills")
+                        .HasColumnType("int");
+
                     b.Property<string>("nickname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

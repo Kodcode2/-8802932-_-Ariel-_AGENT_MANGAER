@@ -16,7 +16,7 @@ namespace BE_AgentGuard.Servrices
         public IPerson person;
         public List<IPerson> persons;
         // dict for person and to now which func I need to choice 
-        private Dictionary<Type, Func<int, Mission>> HowPersonIt = new();
+        private Dictionary<Type, Func<int,List<Mission>, Mission>> HowPersonIt = new();
         public double distance;
         public MissionService(IPerson person, List<IPerson> persons)
         {
@@ -29,30 +29,35 @@ namespace BE_AgentGuard.Servrices
         {
             this.persons = persons;
         }
-        public List<Mission> CheckMission()
+        public List<Mission> CheckMission(List<Mission> missions)
         {
             
             List<IPerson> personsInRange = CheckPersonsInRange();
-            List<Mission> missions = new();
             Type type = person.GetType();
             foreach (var personInRange in personsInRange)
             {
-                // to now how person is Target or Agent
-                missions.Add(HowPersonIt[type](personInRange.Id));
+                // מילון כדי לדעת איזה איש זה מטרה או סוכן
+                Mission mission = HowPersonIt[type](personInRange.Id, missions);
+                if (mission != null) 
+                {
+                    missions.Add(mission);
+                }
             }
             return missions;
         }
-        public Mission IdTargetToMission(int id)
+        public Mission IdTargetToMission(int id, List<Mission> missions)
         {
-            Mission mission = new Mission();
+            if(missions.Any(a => a.agentID == person.Id && a.targetID == id)) { return null; }
+            Mission mission = new();
             mission.agentID = person.Id;
             mission.targetID = id;
             mission.status = Enums.StatusMission.PENDING;
 
             return mission;
         }
-        public Mission IdAgentToMission(int id)
+        public Mission IdAgentToMission(int id, List<Mission> missions)
         {
+            if (missions.Any(a => a.agentID == id && a.targetID == person.Id)) { return null; }
             Mission mission = new Mission();
             mission.targetID = person.Id;
             mission.agentID = id;
@@ -90,11 +95,12 @@ namespace BE_AgentGuard.Servrices
             }                
             return agents;
         }
-        public static int Kill(Agent agent,Mission mission,Target target) 
+        public static void Kill(Agent agent,Mission mission,Target target) 
         {
                 agent.is_active = false;
                 target.is_active = true;
-                return mission.Id;
+            mission.status = Enums.StatusMission.COMPLETED;
+                return;
             
         }
         public static bool ChanceToKill(Agent agent, Target target) 
@@ -102,12 +108,12 @@ namespace BE_AgentGuard.Servrices
             if (agent.point == target.point) { return true; }
             return false;
         }
-        public static List<int> CheckExpiredMission(List<Mission> missions)
+        public static List<int> (List<Mission> missions)
         {
             List<int> intsMissionToDelete = new List<int>();
             foreach (var item in missions)
             {
-                if (item.distance>200)
+                if (item.distance>200 || item.Agent.is_active)
                 {
                     intsMissionToDelete.Add(item.Id);
                 }

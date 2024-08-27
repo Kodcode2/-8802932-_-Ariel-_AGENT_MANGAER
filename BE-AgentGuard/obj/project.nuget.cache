@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Pd58w0XJ/n4=",
+  "dgSpecHash": "GAaUmpJY3dA=",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BE-AgentGuard\\BE-AgentGuard\\BE-AgentGuard.csproj",
   "expectedPackageFiles": [
@@ -137,10 +137,10 @@
     "C:\\Users\\DELL\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore\\6.7.2\\swashbuckle.aspnetcore.6.7.2.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.2\\swashbuckle.aspnetcore.swagger.6.7.2.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.2\\swashbuckle.aspnetcore.swaggergen.6.7.2.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.7.2\\swashbuckle.aspnetcore.swaggerui.6.7.2.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore\\6.7.3\\swashbuckle.aspnetcore.6.7.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.7.3\\swashbuckle.aspnetcore.swagger.6.7.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.7.3\\swashbuckle.aspnetcore.swaggergen.6.7.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.7.3\\swashbuckle.aspnetcore.swaggerui.6.7.3.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",

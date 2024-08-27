@@ -16,6 +16,7 @@ namespace FE_AgentGuard.Controllers
         private readonly string urlAgent;
         private readonly string urlTarget;
         private readonly string urlMission;
+        private TokenService tokenService;
 
         public GeneralController(HttpClient HttpClient)
         {
@@ -35,7 +36,6 @@ namespace FE_AgentGuard.Controllers
             Task<List<Target>> taskTargets = TargetServer.GetObjectsAsync();
             Task<List<Mission>> taskMission = MissionServer.GetObjectsAsync();
 
-            await Task.WhenAll(taskAgents, taskTargets, taskMission);
             List<Agent> agents = await taskAgents;
             List<Target> targets = await taskTargets;
             List<Mission> missions = await taskMission;
@@ -46,7 +46,7 @@ namespace FE_AgentGuard.Controllers
             Dictionary<Point, Person> dict = new Dictionary<Point, Person>();
             foreach (var person in persons)
             {
-                person.color = changeColor(person);
+                person.color = changeColor(person,missions);
                 dict[person.Point] = person;
             }
             General general = new(dict, targets, missions, agents);
@@ -62,15 +62,24 @@ namespace FE_AgentGuard.Controllers
         }
 
 
-        public string changeColor(Person person)
+        public string changeColor(Person person,List<Mission> mission
+            )
         {
             if(person is Agent)
             {
                 if (person.is_active) { return "yellow"; }
                 return "blue";
             }
-            if (person.is_active) { return "green"; }
+            if (TargetAssigned(person.Id,mission)) { return "green"; }
             return "red";
+        }
+        private bool TargetAssigned(int id, List<Mission> missions)
+        {
+            foreach (var mission in missions)
+            {
+                if (mission.targetID == id) {  return true; }
+            }
+            return false;
         }
     }
 }
